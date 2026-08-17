@@ -18,6 +18,23 @@ die Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
 - Noch keine Fehlerbehebungen.
 
+## [1.0.1] - 2026-08-17
+
+### Added
+
+- Fokussierte STA-Fenstertests für die aktivierten Minimieren- und
+  Schließen-Aktionen der eigenen Titelleisten.
+
+### Fixed
+
+- Zuvor deaktivierte Titelleisten-Schaltflächen funktionieren nun im
+  Hauptfenster, in den Einstellungen und in der Monitorauswahl; Minimieren und
+  Schließen lösen die jeweiligen Fensteraktionen einschließlich der
+  konfigurierten Tray-Semantik zuverlässig aus.
+- Das Hauptfenster passt seine Höhe an Live- und Freeze-Zustand an. Die Fußzeile
+  bleibt direkt unter dem Inhalt, sodass im kompakten Live-Zustand keine leere
+  Fläche am unteren Fensterrand mehr entsteht.
+
 ## [1.0.0] - 2026-08-17
 
 ### Changed
@@ -99,7 +116,8 @@ die Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
 - Noch keine Fehlerbehebungen.
 
-[Unreleased]: https://github.com/thisislennard/LageFreeze/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/thisislennard/LageFreeze/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/thisislennard/LageFreeze/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/thisislennard/LageFreeze/compare/v0.1.0-beta.3...v1.0.0
 [0.1.0-beta.3]: https://github.com/thisislennard/LageFreeze/compare/v0.1.0-beta.2...v0.1.0-beta.3
 [0.1.0-beta.2]: https://github.com/thisislennard/LageFreeze/compare/v0.1.0-beta.1...v0.1.0-beta.2

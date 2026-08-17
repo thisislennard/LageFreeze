@@ -4,7 +4,6 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:shell="clr-namespace:System.Windows.Shell;assembly=PresentationFramework"
-    xmlns:system="clr-namespace:System.Windows;assembly=PresentationFramework"
     Title="Monitor auswählen – LageFreeze"
     Width="680"
     Height="600"
@@ -59,11 +58,11 @@
                         FontWeight="SemiBold"
                         Text="Monitor auswählen" />
                     <Button
+                        x:Name="CloseButton"
                         Width="44"
                         HorizontalAlignment="Right"
                         AutomationProperties.Name="Monitorauswahl schließen"
-                        Command="{x:Static system:SystemCommands.CloseWindowCommand}"
-                        CommandParameter="{Binding ElementName=RootWindow}"
+                        Click="CloseButtonClick"
                         Content="×"
                         shell:WindowChrome.IsHitTestVisibleInChrome="True"
                         Style="{StaticResource CloseTitleBarButtonStyle}"

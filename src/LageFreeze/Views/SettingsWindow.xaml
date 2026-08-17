@@ -5,7 +5,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:models="clr-namespace:LageFreeze.Models"
     xmlns:shell="clr-namespace:System.Windows.Shell;assembly=PresentationFramework"
-    xmlns:system="clr-namespace:System.Windows;assembly=PresentationFramework"
     Title="Einstellungen – LageFreeze"
     Width="680"
     Height="700"
@@ -59,11 +58,11 @@
                         FontWeight="SemiBold"
                         Text="Einstellungen" />
                     <Button
+                        x:Name="CloseButton"
                         Width="44"
                         HorizontalAlignment="Right"
                         AutomationProperties.Name="Einstellungen schließen"
-                        Command="{x:Static system:SystemCommands.CloseWindowCommand}"
-                        CommandParameter="{Binding ElementName=RootWindow}"
+                        Click="CloseButtonClick"
                         Content="×"
                         shell:WindowChrome.IsHitTestVisibleInChrome="True"
                         Style="{StaticResource CloseTitleBarButtonStyle}"

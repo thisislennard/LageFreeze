@@ -43,7 +43,10 @@ abgedeckt hat.
 | --- | --- | --- | --- |
 | START-01 | Anwendung erstmals starten | Hauptfenster öffnet ohne technischen Fehlerdialog; Monitore werden gelistet. | |
 | UI-01 | Hauptansicht, Monitorauswahl und Einstellungen bei 100 %, 125 % und 150 % Skalierung öffnen | Inhalte wirken kompakt und ruhig, bleiben vollständig lesbar und bedienbar und werden weder abgeschnitten noch überlagert. | |
+| UI-02 | Im Hauptfenster mehrfach zwischen Live und Freeze wechseln | Das Fenster wächst nur für die zusätzlichen Freeze-Aktionen und wird im Live-Zustand wieder kompakt; die Tastenkürzel-Fußzeile bleibt direkt unter dem Inhalt und es entsteht unten keine leere Fläche. | |
 | DROP-01 | Jede ComboBox in Hauptansicht, Monitorauswahl und Einstellungen öffnen und Einträge mit Maus sowie Tastatur wechseln | Geschlossenes Feld, Popup, Einträge, Auswahl-, Hover- und Fokuszustände sowie eine gegebenenfalls sichtbare Scrollbar bleiben vollständig dunkel und gut lesbar; es erscheint keine helle Systemfläche. | |
+| TITLE-01 | Im Hauptfenster die eigenen Schaltflächen **—** und **×** bei deaktiviertem System-Tray verwenden | Beide Schaltflächen sind sichtbar aktiviert und anklickbar; **—** minimiert das Fenster in die Taskleiste und **×** beendet LageFreeze sicher. | |
+| TITLE-02 | Einstellungen und Monitorauswahl jeweils öffnen und über **×** schließen | Die Schaltfläche ist in beiden Dialogen sichtbar aktiviert; nur der jeweilige Dialog schließt und das Hauptfenster bleibt bedienbar. | |
 | MON-01 | Jeden Monitor anhand Nummer, Name und Auflösung mit Windows vergleichen | Liste ist vollständig und eindeutig genug für die Auswahl. | |
 | MON-02 | Zielmonitor wählen, Anwendung schließen und erneut starten | Derselbe physische Monitor wird robust wiedererkannt. | |
 | MON-03 | Gespeicherten Zielmonitor vor dem Start entfernen | Anwendung bleibt bedienbar und fordert verständlich zu einer neuen Auswahl auf. | |
@@ -63,11 +66,12 @@ abgedeckt hat.
 | PNG-02 | Benutzerdefinierten Screenshot-Ordner wählen und erneut speichern | PNG wird ausschließlich im gewählten lokalen Ordner gespeichert. | |
 | PNG-03 | Bei sichtbarem `EINGEFROREN`-Hinweis ein Standbild speichern | Die PNG-Datei enthält nur den aufgenommenen Monitorinhalt, nicht den Hinweis. | |
 | SET-01 | Hotkeys ändern, deaktivieren und auf Standard zurücksetzen | Änderungen werden nach Speichern aktiv, bleiben nach Neustart erhalten und lassen sich auf `F9`/`F10` zurücksetzen. | |
-| TRAY-01 | Hauptfenster bei aktiviertem Tray schließen oder minimieren | Hauptfenster verschwindet entsprechend der Einstellung; Tray-Menü bleibt erreichbar und zeigt nur zum Zustand passende Aktionen aktiv. | |
+| TRAY-01 | System-Tray aktivieren und das Hauptfenster über **—** minimieren | Das Hauptfenster wird verborgen, LageFreeze läuft weiter und lässt sich über das Tray-Icon wieder in normaler Fenstergröße öffnen. | |
 | TRAY-02 | Freeze, Refresh, Live, Einstellungen und Beenden über das Tray auslösen | Jede Aktion entspricht der Hauptansicht; **Beenden** entfernt Icon und alle Overlays. | |
+| TRAY-03 | **Schließen minimiert in Tray** aktivieren, das Hauptfenster über **×** schließen und anschließend die Einstellung deaktivieren und wiederholen | Mit aktivierter Einstellung wird das Hauptfenster nur verborgen und bleibt über das Tray erreichbar; ohne die Einstellung beendet **×** die Anwendung und entfernt Tray-Icon sowie Overlays. | |
 | AUTO-01 | Autostart aktivieren, optional minimierten Start wählen und Windows-Anmeldung simulieren | Eintrag gilt nur für den aktuellen Benutzer; LageFreeze startet wie gewählt und benötigt keine erhöhten Rechte. | |
 | AUTO-02 | Autostart wieder deaktivieren | LageFreeze startet bei der nächsten Anmeldung nicht automatisch. | |
-| CLOSE-01 | Anwendung während eines Freeze normal schließen | Alle LageFreeze-Fenster schließen und der Live-Desktop bleibt sichtbar. | |
+| CLOSE-01 | Bei deaktivierter Option **Schließen minimiert in Tray** die Anwendung während eines Freeze über **×** schließen | Alle LageFreeze-Fenster und das Tray-Icon schließen; der Live-Desktop bleibt sichtbar. | |
 
 ## DPI-, Layout- und Hardwareprüfung
 

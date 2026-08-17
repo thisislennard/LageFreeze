@@ -13,7 +13,8 @@ LageFreeze friert den sichtbaren Inhalt eines ausgewählten Windows-Monitors als
 pixelgenaues, randloses Standbild ein. Desktop und Anwendungen laufen darunter
 weiter und sind mit einem Tastendruck sofort wieder live sichtbar.
 
-> **Projektstatus:** `1.0.0` ist die erste stabile Version von LageFreeze.
+> **Projektstatus:** `1.0.1` ist die aktuelle stabile Patch-Version von
+> LageFreeze.
 > Automatisierte Prüfungen und die bislang durchgeführten Smoke-Checks sind
 > erfolgreich. Eine vollständige Hardwarematrix für alle Multi-Monitor- und
 > DPI-Konfigurationen ist noch nicht dokumentiert; vor dem operativen Einsatz
@@ -57,7 +58,7 @@ Live oder beim Beenden wieder geschlossen wird.
    `EINGEFROREN`-Hinweis wird dabei nicht in das neue Standbild aufgenommen.
 6. Mit **LIVE-BILD WIEDERHERSTELLEN** zum aktuellen Bild zurückkehren.
 
-## Funktionen von 1.0.0
+## Funktionen von 1.0.1
 
 - Auswahl und lokales Wiedererkennen eines angeschlossenen Monitors
 - Monitoridentifikation auf allen Displays
@@ -69,6 +70,8 @@ Live oder beim Beenden wieder geschlossen wird.
 - verständliche Fehlermeldungen und lokale, täglich getrennte Logs
 - kompakte, ruhige und touchscreen-taugliche Oberfläche mit vollständig dunklen
   Auswahlfeldern und Dropdown-Popups
+- funktionierende eigene Titelleisten und eine automatisch an Live- oder
+  Freeze-Zustand angepasste Fensterhöhe
 - System-Tray mit den wichtigsten Freeze-, Live- und Refresh-Aktionen
 - optionaler Autostart und minimierter Start, standardmäßig deaktiviert
 - lokaler PNG-Export nach `Bilder\LageFreeze` oder in einen gewählten Ordner
@@ -86,7 +89,7 @@ Prüfungen stehen in der
 ### Hauptansicht
 
 > Platzhalter – `docs/images/main-window.png` wird ergänzt, sobald eine für
-> `1.0.0` geprüfte Aufnahme vorliegt.
+> `1.0.1` geprüfte Aufnahme vorliegt.
 
 ### Freeze-Modus
 
@@ -124,6 +127,18 @@ Die Fußzeile bleibt bewusst auf die beiden Tastenkürzel `F9` und `F10`
 beschränkt. Hinweise zum vollständig lokalen Betrieb stehen gesammelt im
 Abschnitt [Datenschutz und lokales Logging](#datenschutz-und-lokales-logging),
 statt die Hauptansicht mit einem zusätzlichen Statushinweis zu belegen.
+
+Das Hauptfenster passt seine Höhe automatisch an: Im Live-Zustand bleibt es
+kompakt, im Freeze-Zustand wächst es für die zusätzlichen Aktionen. Die
+Tastenkürzel-Fußzeile folgt dem sichtbaren Inhalt, ohne eine leere Fläche am
+unteren Fensterrand zu hinterlassen.
+
+Die eigenen Titelleisten-Schaltflächen sind vollständig bedienbar. **—**
+minimiert das Hauptfenster; bei aktiviertem System-Tray wird es dabei verborgen
+und bleibt über das Tray-Icon erreichbar. **×** folgt der Einstellung
+**Schließen minimiert in Tray**: Ist sie aktiv, wird das Hauptfenster verborgen,
+andernfalls beendet LageFreeze die Anwendung sicher. In Einstellungen und
+Monitorauswahl schließt **×** nur das jeweilige Dialogfenster.
 
 - **STANDBILD AKTUALISIEREN** blendet das gesamte Overlay einschließlich des
   `EINGEFROREN`-Hinweises kurz aus und nimmt den tatsächlichen Inhalt dahinter
@@ -213,7 +228,7 @@ Wichtige Dokumente:
 - [Sicherheitsmeldungen](SECURITY.md)
 
 Builds und Tests laufen bei Pushes und Pull Requests gegen `main` automatisch.
-Ein SemVer-Tag wie `v1.0.0` erzeugt die drei einheitlich benannten
+Ein SemVer-Tag wie `v1.0.1` erzeugt die drei einheitlich benannten
 Release-Artefakte. Details beschreibt der [Release-Prozess](docs/releasing.md).
 
 ## Releases
