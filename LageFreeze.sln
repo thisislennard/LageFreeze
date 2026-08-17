@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LageFreeze", "src\LageFreeze\LageFreeze.csproj", "{03E4C7AE-557C-42CC-82A3-E81737329E39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LageFreeze.Tests", "tests\LageFreeze.Tests\LageFreeze.Tests.csproj", "{21EE3A5F-499F-4C08-A571-27DCBE40D3C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03E4C7AE-557C-42CC-82A3-E81737329E39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03E4C7AE-557C-42CC-82A3-E81737329E39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03E4C7AE-557C-42CC-82A3-E81737329E39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03E4C7AE-557C-42CC-82A3-E81737329E39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21EE3A5F-499F-4C08-A571-27DCBE40D3C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21EE3A5F-499F-4C08-A571-27DCBE40D3C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21EE3A5F-499F-4C08-A571-27DCBE40D3C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21EE3A5F-499F-4C08-A571-27DCBE40D3C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

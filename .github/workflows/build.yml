@@ -1,0 +1,58 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  DOTNET_CLI_TELEMETRY_OPTOUT: "1"
+  DOTNET_NOLOGO: "1"
+
+jobs:
+  build-and-test:
+    name: Build and test (.NET 8)
+    runs-on: windows-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Set up .NET 8 SDK
+        uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: global.json
+
+      - name: Restore dependencies
+        run: dotnet restore LageFreeze.sln
+
+      - name: Build solution
+        run: dotnet build LageFreeze.sln --configuration Release --no-restore -p:ContinuousIntegrationBuild=true
+
+      - name: Run automated tests
+        run: dotnet test LageFreeze.sln --configuration Release --no-build --no-restore --logger "trx;LogFileName=test-results.trx" --results-directory TestResults
+
+      - name: Verify tests were discovered
+        shell: pwsh
+        run: |
+          [xml]$results = Get-Content -LiteralPath "TestResults\test-results.trx" -Raw
+          $executed = [int]$results.TestRun.ResultSummary.Counters.executed
+          if ($executed -lt 1) {
+            throw "Der Testlauf hat keine Tests ausgeführt."
+          }
+
+          Write-Host "$executed automatisierte Tests wurden ausgeführt."

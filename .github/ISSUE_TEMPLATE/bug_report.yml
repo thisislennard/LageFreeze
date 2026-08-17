@@ -1,0 +1,89 @@
+name: Fehlerbericht
+description: Melde ein reproduzierbares Problem mit LageFreeze.
+title: "[Fehler]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke für den Fehlerbericht. Bitte prüfe zuerst, ob bereits ein passendes Issue existiert.
+        Logs und Screenshots können vertrauliche Bildschirminhalte oder lokale Pfade enthalten. Bitte vor dem Hochladen prüfen und schwärzen.
+
+  - type: input
+    id: version
+    attributes:
+      label: LageFreeze-Version
+      description: Die Versionsnummer steht im Release-Namen oder in den Dateieigenschaften.
+      placeholder: z. B. 0.1.0
+    validations:
+      required: true
+
+  - type: input
+    id: windows-version
+    attributes:
+      label: Windows-Version
+      placeholder: z. B. Windows 11 24H2, Build 26100
+    validations:
+      required: true
+
+  - type: textarea
+    id: monitor-setup
+    attributes:
+      label: Monitorkonfiguration
+      description: Anzahl, Auflösungen, Ausrichtung und Position relativ zum Hauptmonitor.
+      placeholder: "2 Monitore: Hauptmonitor 2560 × 1440; Außenmonitor links, 3840 × 2160 im Hochformat"
+    validations:
+      required: true
+
+  - type: input
+    id: dpi-scaling
+    attributes:
+      label: DPI-Skalierung
+      description: Skalierung jedes beteiligten Monitors.
+      placeholder: z. B. Hauptmonitor 125 %, Außenmonitor 150 %
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Fehlerbeschreibung
+      description: Was ist passiert und wie hat sich das Problem bemerkbar gemacht?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Schritte zum Reproduzieren
+      placeholder: |
+        1. LageFreeze starten
+        2. Monitor 2 auswählen
+        3. …
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Erwartetes Verhalten
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevanter Log-Auszug (optional)
+      description: Logs liegen unter %LOCALAPPDATA%\LageFreeze\Logs\. Bitte nur den relevanten und geprüften Ausschnitt einfügen oder anhängen.
+      render: text
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Vor dem Absenden
+      options:
+        - label: Ich habe nach vorhandenen Issues gesucht.
+          required: true
+        - label: Ich habe Anhänge und Logs auf vertrauliche Inhalte geprüft.
+          required: true

@@ -1,0 +1,50 @@
+name: Funktionswunsch
+description: Schlage eine klar abgegrenzte Verbesserung für LageFreeze vor.
+title: "[Wunsch]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        LageFreeze bleibt bewusst klein und zuverlässig. Beschreibe deshalb vor allem den konkreten Anwendungsfall.
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Anwendungsfall
+      description: Welches konkrete Problem soll gelöst werden?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Gewünschte Funktion
+      description: Wie sollte sich LageFreeze aus Sicht des Benutzers verhalten?
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefit
+    attributes:
+      label: Nutzen
+      description: Warum ist die Funktion im vorgesehenen Einsatz hilfreich?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Bisherige Alternativen (optional)
+      description: Welche Umgehung oder andere Lösung wird derzeit verwendet?
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Vor dem Absenden
+      options:
+        - label: Ich habe die Roadmap und vorhandene Issues geprüft.
+          required: true
+        - label: Der Vorschlag macht LageFreeze nicht von einer bestimmten Quellanwendung oder einem Cloud-Dienst abhängig.
+          required: true

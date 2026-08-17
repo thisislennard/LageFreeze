@@ -1,0 +1,49 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+[Aa]rtifacts/
+[Pp]ublish/
+[Tt]est[Rr]esults/
+installer/output/
+
+# Visual Studio and VS Code
+.vs/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Test and coverage output
+coverage/
+coverage*.json
+coverage*.xml
+*.coverage
+*.coveragexml
+
+# NuGet and local tools
+packages/
+*.nupkg
+*.snupkg
+.dotnet/
+.dotnet-home/
+.nuget/
+.store/
+
+# Logs, dumps, and temporary files
+*.log
+*.dmp
+*.tmp
+*.temp
+~$*
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AssemblyName>LageFreeze</AssemblyName>
+    <RootNamespace>LageFreeze</RootNamespace>
+    <Version>0.1.0</Version>
+    <Authors>ThisisLennard and LageFreeze contributors</Authors>
+    <Copyright>Copyright © 2026 ThisisLennard</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/thisislennard/LageFreeze</RepositoryUrl>
+    <Product>LageFreeze</Product>
+    <Description>Freezes the content of a selected Windows monitor.</Description>
+    <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <DebugType>embedded</DebugType>
+    <PublishReadyToRun>false</PublishReadyToRun>
+  </PropertyGroup>
+</Project>
