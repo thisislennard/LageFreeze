@@ -117,6 +117,11 @@ im Freeze-Modus das Standbild und, falls aktiviert, nur den kleinen
 **EINGEFROREN** und die jeweils verfügbaren großen Aktionen sind im Hauptfenster
 jederzeit sichtbar.
 
+Die Fußzeile bleibt bewusst auf die beiden Tastenkürzel `F9` und `F10`
+beschränkt. Hinweise zum vollständig lokalen Betrieb stehen gesammelt im
+Abschnitt [Datenschutz und lokales Logging](#datenschutz-und-lokales-logging),
+statt die Hauptansicht mit einem zusätzlichen Statushinweis zu belegen.
+
 - **STANDBILD AKTUALISIEREN** blendet das gesamte Overlay einschließlich des
   `EINGEFROREN`-Hinweises kurz aus und nimmt den tatsächlichen Inhalt dahinter
   neu auf. Der Hinweis wird dadurch nicht dauerhaft in das Standbild eingebrannt.

@@ -345,12 +345,6 @@
                             FontSize="12"
                             Text="F9  Freeze / Live" />
                         <TextBlock
-                            Grid.Column="1"
-                            HorizontalAlignment="Center"
-                            Foreground="{StaticResource MutedForegroundBrush}"
-                            FontSize="12"
-                            Text="Offline · keine Telemetrie" />
-                        <TextBlock
                             Grid.Column="2"
                             Foreground="{StaticResource MutedForegroundBrush}"
                             FontSize="12"
