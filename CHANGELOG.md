@@ -8,6 +8,20 @@ die Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
 ### Added
 
+- Noch keine neuen Funktionen.
+
+### Changed
+
+- Noch keine Änderungen.
+
+### Fixed
+
+- Noch keine Fehlerbehebungen.
+
+## [0.1.0-beta.1] - 2026-08-17
+
+### Added
+
 - Erste .NET-8-WPF-Anwendung für Windows 10 und 11 auf x64.
 - Auswahl, Identifikation und lokales Wiedererkennen angeschlossener Monitore.
 - Freeze-, Live- und Refresh-Ablauf über ein randloses Topmost-Fenster.
@@ -27,4 +41,5 @@ die Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
 - Noch keine Fehlerbehebungen.
 
-[Unreleased]: https://github.com/thisislennard/LageFreeze/commits/main
+[Unreleased]: https://github.com/thisislennard/LageFreeze/compare/v0.1.0-beta.1...HEAD
+[0.1.0-beta.1]: https://github.com/thisislennard/LageFreeze/releases/tag/v0.1.0-beta.1
