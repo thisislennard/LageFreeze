@@ -14,10 +14,16 @@ Meldungen werden so zeitnah wie möglich bestätigt und bewertet.
 
 ## Unterstützte Versionen
 
-Während der Vorabentwicklung werden Sicherheitskorrekturen nur für die neueste
-unter [GitHub Releases](https://github.com/thisislennard/LageFreeze/releases)
-veröffentlichte Version bereitgestellt. Der Stand auf `main` ist ein
-Entwicklungsstand und nicht für den produktiven Einsatz freigegeben.
+Sicherheitskorrekturen werden für die neueste veröffentlichte Version der
+`1.x`-Reihe bereitgestellt. Frühere `1.x`-Versionen sollten auf den aktuellen
+Stand aktualisiert werden; die `0.x`-Vorabversionen werden nicht mehr
+unterstützt. Verbindliche Versionen stehen unter
+[GitHub Releases](https://github.com/thisislennard/LageFreeze/releases).
+
+Der Stand auf `main` bleibt der Entwicklungsstand für die nächste Version und
+kann noch nicht veröffentlichte Änderungen enthalten. Für Sicherheitsmeldungen
+bitte immer angeben, ob eine Release-Version oder ein bestimmter Commit aus
+`main` betroffen ist.
 
 ## Datenschutz und Sicherheitsgrenzen
 

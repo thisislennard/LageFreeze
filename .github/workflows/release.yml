@@ -188,7 +188,7 @@ jobs:
             "--verify-tag",
             "--title", "LageFreeze $tag",
             "--generate-notes",
-            "--notes", "Für normale Windows-Systeme bitte **LageFreeze-Setup-x64.exe** verwenden. Die SHA-256-Prüfsummen stehen in **SHA256SUMS.txt**. Die Vorabversion ist noch nicht digital signiert; Windows kann deshalb einen SmartScreen-Hinweis anzeigen."
+            "--notes", "Für normale Windows-Systeme bitte **LageFreeze-Setup-x64.exe** verwenden. Die SHA-256-Prüfsummen stehen in **SHA256SUMS.txt**. Die Anwendung ist noch nicht digital signiert; Windows kann deshalb einen SmartScreen-Hinweis anzeigen. Vor dem operativen Einsatz sollte die konkrete Monitor- und DPI-Konfiguration anhand der manuellen Testmatrix geprüft werden."
           )
 
           if ($env:IS_PRERELEASE -eq "true") {

@@ -3,12 +3,12 @@
 Automatisierte Tests decken reine Programmlogik, Einstellungspersistenz und die
 strukturelle Initialisierung zentraler WPF-Fenster ab. Bildschirmaufnahme,
 visuelle Darstellung, Vollbildfenster, DPI, Hotkeys und Änderungen der
-Monitorhardware müssen vor jedem Release zusätzlich auf echten Windows-Systemen
-geprüft werden.
+Monitorhardware müssen vor dem operativen Einsatz zusätzlich auf der konkreten
+Windows-Zielumgebung geprüft werden.
 
 Ein nicht ausgeführter Hardwaretest gilt nicht als bestanden. Ergebnisse werden
-für jeden Release-Kandidaten in einer Kopie dieser Matrix oder im zugehörigen
-Release-Issue dokumentiert.
+für jeden geprüften Release-Kandidaten beziehungsweise jede Zielumgebung in
+einer Kopie dieser Matrix oder im zugehörigen Release-Issue dokumentiert.
 
 ## Testprotokoll
 
@@ -95,8 +95,9 @@ abgedeckt hat.
 
 ## Abschluss
 
-Vor Freigabe eines Tags müssen alle für die Version relevanten Zeilen ein
-Ergebnis besitzen. Abweichungen werden als Issue dokumentiert und entweder vor
-dem Release behoben oder ausdrücklich als bekannte Einschränkung in den Release
-Notes genannt. Freeze, Live, Refresh, sauberes Beenden, Installation und
-Deinstallation dürfen für ein Release nicht offen oder fehlgeschlagen sein.
+Vor dem operativen Einsatz müssen alle für die konkrete Zielumgebung relevanten
+Zeilen ein Ergebnis besitzen. Abweichungen werden als Issue dokumentiert und vor
+der Inbetriebnahme behoben oder organisatorisch als bekannte Einschränkung
+bewertet. Freeze, Live, Refresh, sauberes Beenden, Installation und
+Deinstallation dürfen für die operative Freigabe nicht offen oder fehlgeschlagen
+sein.

@@ -10,7 +10,7 @@
     <ApplicationIcon>Assets\LageFreeze.ico</ApplicationIcon>
     <AssemblyName>LageFreeze</AssemblyName>
     <RootNamespace>LageFreeze</RootNamespace>
-    <Version>0.1.0</Version>
+    <Version>1.0.0</Version>
     <Authors>ThisisLennard and LageFreeze contributors</Authors>
     <Copyright>Copyright © 2026 ThisisLennard</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>

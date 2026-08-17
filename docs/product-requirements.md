@@ -13,7 +13,7 @@ Plexiglasscheibe, auf der taktische Markierungen mit Whiteboard-Markern angebrac
 werden. Das Produkt bleibt unabhängig von Fireboard oder jeder anderen
 Quellanwendung.
 
-## MVP-Funktionen
+## Kernfunktionen von 1.0.0
 
 1. Alle angeschlossenen Monitore erkennen und verständlich mit Nummer,
    Bezeichnung und Auflösung auflisten.
@@ -80,7 +80,7 @@ ein dauerhaft eingefrorenes oder schwarzes Bild hinterlassen.
   nicht in Benutzerdialoge.
 - Optional gespeicherte Screenshots bleiben lokal.
 
-## In 0.1.0 integrierter Bedienkomfort
+## In 1.0.0 enthaltener Bedienkomfort
 
 - System-Tray und konfigurierbares Verhalten beim Schließen
 - Autostart, standardmäßig deaktiviert
@@ -92,11 +92,11 @@ ein dauerhaft eingefrorenes oder schwarzes Bild hinterlassen.
 ## Spätere Funktionen
 
 - weitere Helligkeits-, Kontrast- und Sättigungsoptionen
-- optionale Update-Prüfung, aber kein automatisches Update im MVP
+- optionale Update-Prüfung, aber kein automatisches Update in `1.0.0`
 
 ## Distribution
 
-Die vorbereitete Distribution umfasst `LageFreeze-Setup-x64.exe`,
+Der Release-Workflow für `1.0.0` erzeugt `LageFreeze-Setup-x64.exe`,
 `LageFreeze-Portable-x64.zip` und `SHA256SUMS.txt`. Installation, Startmenü,
 optionale Desktop-Verknüpfung, Update und Deinstallation sollen Windows-typisch
 funktionieren. Für Endanwender wird eine self-contained x64-Veröffentlichung
@@ -111,7 +111,8 @@ echte Multi-Monitor-Konfigurationen, gemischte DPI-Werte, Fullscreen,
 Freeze/Refresh ohne erneut aufgenommenen Hinweis, die vollständig dunklen
 Dropdown-Popups, Monitorentfernung, 4K und Hochformat.
 
-Ein Release setzt einen erfolgreichen Build, App-Start, Monitorerkennung,
-Freeze/Live/Refresh, sauberes Beenden, funktionierende Installation und
-Deinstallation, aktuelle Dokumentation und ein reproduzierbares GitHub Release
-voraus.
+Ein Release setzt einen erfolgreichen Build, aktuelle Dokumentation und einen
+reproduzierbaren GitHub-Release-Ablauf voraus. Die operative Abnahme in einer
+konkreten Zielumgebung umfasst zusätzlich App-Start, Monitorerkennung,
+Freeze/Live/Refresh, sauberes Beenden sowie funktionierende Installation und
+Deinstallation anhand der manuellen Testmatrix.

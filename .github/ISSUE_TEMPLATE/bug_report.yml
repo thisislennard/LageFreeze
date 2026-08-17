@@ -15,7 +15,7 @@ body:
     attributes:
       label: LageFreeze-Version
       description: Die Versionsnummer steht im Release-Namen oder in den Dateieigenschaften.
-      placeholder: z. B. 0.1.0
+      placeholder: z. B. 1.0.0
     validations:
       required: true
 

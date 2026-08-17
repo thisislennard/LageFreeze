@@ -18,6 +18,16 @@ die Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
 - Noch keine Fehlerbehebungen.
 
+## [1.0.0] - 2026-08-17
+
+### Changed
+
+- Erster stabil versionierter Release des in der Beta-Reihe aufgebauten
+  Funktionsumfangs.
+- Fußzeile des Hauptfensters auf die beiden relevanten Tastenkürzel `F9` und
+  `F10` reduziert; der redundante Hinweis zum lokalen Betrieb bleibt in der
+  Datenschutzdokumentation erhalten.
+
 ## [0.1.0-beta.3] - 2026-08-17
 
 ### Added
@@ -89,7 +99,8 @@ die Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
 - Noch keine Fehlerbehebungen.
 
-[Unreleased]: https://github.com/thisislennard/LageFreeze/compare/v0.1.0-beta.3...HEAD
+[Unreleased]: https://github.com/thisislennard/LageFreeze/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/thisislennard/LageFreeze/compare/v0.1.0-beta.3...v1.0.0
 [0.1.0-beta.3]: https://github.com/thisislennard/LageFreeze/compare/v0.1.0-beta.2...v0.1.0-beta.3
 [0.1.0-beta.2]: https://github.com/thisislennard/LageFreeze/compare/v0.1.0-beta.1...v0.1.0-beta.2
 [0.1.0-beta.1]: https://github.com/thisislennard/LageFreeze/releases/tag/v0.1.0-beta.1

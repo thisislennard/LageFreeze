@@ -13,9 +13,11 @@ LageFreeze friert den sichtbaren Inhalt eines ausgewählten Windows-Monitors als
 pixelgenaues, randloses Standbild ein. Desktop und Anwendungen laufen darunter
 weiter und sind mit einem Tastendruck sofort wieder live sichtbar.
 
-> **Projektstatus:** Der Funktionsumfang der geplanten `0.1.0`-Vorabversion ist
-> implementiert. Die verpflichtende Validierung auf realer Multi-Monitor- und
-> DPI-Hardware ist noch offen; deshalb gibt es noch keine stabile Freigabe.
+> **Projektstatus:** `1.0.0` ist die erste stabile Version von LageFreeze.
+> Automatisierte Prüfungen und die bislang durchgeführten Smoke-Checks sind
+> erfolgreich. Eine vollständige Hardwarematrix für alle Multi-Monitor- und
+> DPI-Konfigurationen ist noch nicht dokumentiert; vor dem operativen Einsatz
+> muss die konkrete Zielumgebung anhand der manuellen Testmatrix geprüft werden.
 
 ## Download
 
@@ -27,9 +29,9 @@ bereit:
 - `LageFreeze-Portable-x64.zip` – portable Variante ohne Installation
 - `SHA256SUMS.txt` – SHA-256-Prüfsummen beider Downloads
 
-Für den normalen Einsatz wird die Installer-Version empfohlen. Falls noch kein
-Release angezeigt wird, gibt es derzeit ausschließlich den Entwicklungsstand im
-Repository.
+Für den normalen Einsatz wird die Installer-Version des neuesten stabilen
+Releases empfohlen. Frühere Vorabversionen bleiben im Release-Archiv
+nachvollziehbar.
 
 ## Was ist LageFreeze?
 
@@ -55,7 +57,7 @@ Live oder beim Beenden wieder geschlossen wird.
    `EINGEFROREN`-Hinweis wird dabei nicht in das neue Standbild aufgenommen.
 6. Mit **LIVE-BILD WIEDERHERSTELLEN** zum aktuellen Bild zurückkehren.
 
-## Funktionen der 0.1.0-Vorabversion
+## Funktionen von 1.0.0
 
 - Auswahl und lokales Wiedererkennen eines angeschlossenen Monitors
 - Monitoridentifikation auf allen Displays
@@ -75,15 +77,16 @@ Live oder beim Beenden wieder geschlossen wird.
 - übersichtliche Einstellungen für Monitor, Hotkeys, Tray, Anzeige und Screenshots
 - vollständig lokaler Betrieb ohne Cloud, Telemetrie oder Tracking
 
-Der Stand und die noch offenen Freigabeschritte stehen in der
+Der aktuelle Validierungsstand und die weiterhin erforderlichen manuellen
+Prüfungen stehen in der
 [Roadmap](docs/roadmap.md) und der [manuellen Testmatrix](docs/manual-testing.md).
 
 ## Screenshots
 
 ### Hauptansicht
 
-> Platzhalter – `docs/images/main-window.png` wird mit dem ersten visuellen
-> Release ergänzt.
+> Platzhalter – `docs/images/main-window.png` wird ergänzt, sobald eine für
+> `1.0.0` geprüfte Aufnahme vorliegt.
 
 ### Freeze-Modus
 
@@ -101,10 +104,10 @@ Der Installer installiert LageFreeze für den aktuellen Benutzer. Eine separate
 Installer-Version eingespielt werden; lokale Einstellungen und Logs bleiben bei
 der Deinstallation bewusst erhalten.
 
-Die Vorabversion ist noch nicht mit einem vertrauenswürdigen Code-Signing-Zertifikat
-signiert. Windows kann deshalb beim ersten Start einen SmartScreen-Hinweis
-anzeigen. Downloads sollten ausschließlich vom offiziellen Release stammen und
-bei Bedarf mit `SHA256SUMS.txt` geprüft werden.
+Die Anwendung und der Installer sind derzeit nicht mit einem vertrauenswürdigen
+Code-Signing-Zertifikat signiert. Windows kann deshalb beim ersten Start einen
+SmartScreen-Hinweis anzeigen. Downloads sollten ausschließlich vom offiziellen
+Release stammen und bei Bedarf mit `SHA256SUMS.txt` geprüft werden.
 
 Für die portable Variante das ZIP-Archiv in einen eigenen Ordner entpacken und
 `LageFreeze.exe` starten.
@@ -210,7 +213,7 @@ Wichtige Dokumente:
 - [Sicherheitsmeldungen](SECURITY.md)
 
 Builds und Tests laufen bei Pushes und Pull Requests gegen `main` automatisch.
-Ein SemVer-Tag wie `v0.1.0` erzeugt die drei einheitlich benannten
+Ein SemVer-Tag wie `v1.0.0` erzeugt die drei einheitlich benannten
 Release-Artefakte. Details beschreibt der [Release-Prozess](docs/releasing.md).
 
 ## Releases
@@ -218,7 +221,8 @@ Release-Artefakte. Details beschreibt der [Release-Prozess](docs/releasing.md).
 Versionen folgen [Semantic Versioning](https://semver.org/lang/de/) und werden
 unter [GitHub Releases](https://github.com/thisislennard/LageFreeze/releases)
 veröffentlicht. Das [Changelog](CHANGELOG.md) dokumentiert anwenderrelevante
-Änderungen; ein Release wird erst nach der manuellen Hardwarematrix freigegeben.
+Änderungen. Vor dem operativen Einsatz bleibt die manuelle Hardwarematrix für
+die konkrete Zielumgebung erforderlich.
 
 ## Haftungshinweis
 

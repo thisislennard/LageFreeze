@@ -1,16 +1,19 @@
 # Roadmap
 
-## Stand der 0.1.0-Vorabversion
+## Stand von 1.0.0
 
 Die Funktionen aus Phase 1 und Phase 2 einschließlich der kompakten Oberfläche,
 dunklen Dropdown-Popups und des konfigurierbaren `EINGEFROREN`-Hinweises sind im
-aktuellen Entwicklungsstand implementiert. Build, automatisierte Tests,
-Installer und Release-Automatisierung sind vorbereitet. Vor einer stabilen
-Freigabe fehlen noch die vollständige manuelle Hardwarematrix, geprüfte
-Screenshots und die Abnahme von Installation, Update und Deinstallation auf
-einem sauberen Windows-System.
+Funktionsumfang der ersten stabilen Version enthalten und implementiert. Build,
+automatisierte Tests, Installer und Release-Automatisierung sind eingerichtet;
+die automatisierten Prüfungen und die bislang beobachteten Smoke-Checks sind
+erfolgreich. Die vollständige manuelle Hardwarematrix ist noch nicht für alle
+aufgeführten Konfigurationen dokumentiert. Vor dem operativen Einsatz müssen die
+jeweilige Zielhardware sowie Installation, Update und Deinstallation in dieser
+Umgebung geprüft werden. Verifizierte Screenshots bleiben eine offene
+Dokumentationsaufgabe und sind kein Ersatz für diese Abnahme.
 
-## Phase 1 – stabiles MVP
+## Phase 1 – Kernfunktionen (in 1.0.0 enthalten)
 
 - Solution, WPF-Anwendung und fokussiertes Testprojekt
 - Monitorerkennung, Auswahl, Identifikation und gespeicherte Auswahl
@@ -20,7 +23,7 @@ einem sauberen Windows-System.
 - verständliche Fehler und lokales Logging
 - manuelle Testmatrix für reale Monitorhardware
 
-## Phase 2 – Bedienkomfort (in 0.1.0 integriert)
+## Phase 2 – Bedienkomfort (in 1.0.0 enthalten)
 
 - System-Tray
 - übersichtliche Einstellungen
@@ -31,7 +34,7 @@ einem sauberen Windows-System.
 - vollständig dunkle ComboBoxen einschließlich Dropdown-Popup
 - optionaler `EINGEFROREN`-Hinweis mit vier Eckpositionen
 
-## Phase 3 – Distribution (technisch vorbereitet)
+## Phase 3 – Distribution (in 1.0.0 enthalten)
 
 - Inno-Setup-Installer
 - self-contained x64 Build und optionale Portable-Version
@@ -41,12 +44,12 @@ einem sauberen Windows-System.
 
 ## Versionsschema
 
-Semantic Versioning mit Tags wie `v0.1.0`: Minor-Versionen bringen Funktionen,
-Patch-Versionen Fehlerkorrekturen und `1.0.0` bezeichnet die erste stabile
-Version. `main` bleibt die einfache Hauptlinie; größere Änderungen erfolgen über
-kurzlebige Feature-Branches und Pull Requests.
+Semantic Versioning mit Tags wie `v1.0.0`: `1.0.0` bildet die erste stabile
+Basis, Minor-Versionen bringen abwärtskompatible Funktionen und Patch-Versionen
+abwärtskompatible Fehlerkorrekturen. `main` bleibt die einfache Hauptlinie;
+größere Änderungen erfolgen über kurzlebige Feature-Branches und Pull Requests.
 
-## Bewusst nicht im MVP
+## Bewusst nicht in 1.0.0
 
 Cloud-Dienste, Telemetrie, komplexe Navigation, automatisches Update-System,
 umfangreiche Bildbearbeitung, anwendungsspezifische Integrationen und eine
