@@ -62,13 +62,13 @@
                             Margin="0,0,12,0"
                             Background="#FF173B50"
                             CornerRadius="10">
-                            <TextBlock
+                            <Image
+                                Width="32"
+                                Height="32"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
-                                FontSize="14"
-                                FontWeight="Bold"
-                                Foreground="{StaticResource PrimaryBrush}"
-                                Text="LF" />
+                                Source="/LageFreeze;component/Assets/LageFreeze.png"
+                                Stretch="Uniform" />
                         </Border>
                         <StackPanel VerticalAlignment="Center">
                             <TextBlock FontSize="19" FontWeight="SemiBold" Text="LageFreeze" />

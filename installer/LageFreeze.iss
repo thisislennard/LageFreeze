@@ -39,6 +39,7 @@ ArchitecturesInstallIn64BitMode=x64compatible
 MinVersion=10.0
 OutputDir={#OutputDir}
 OutputBaseFilename=LageFreeze-Setup-x64
+SetupIconFile=..\src\LageFreeze\Assets\LageFreeze.ico
 Compression=lzma2/max
 SolidCompression=yes
 WizardStyle=modern

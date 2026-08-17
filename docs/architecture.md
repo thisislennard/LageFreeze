@@ -100,6 +100,10 @@ ist standardmäßig deaktiviert und wird nur auf ausdrücklichen Benutzerwunsch 
 `Run`-Schlüssel des aktuellen Benutzers eingetragen. Es werden weder erhöhte
 Rechte noch maschinenweite Registry-Einträge benötigt.
 
-## Noch nicht entschieden
+## Lizenz
 
-- konkrete Open-Source-Lizenz (MIT, Apache-2.0 oder GPLv3)
+LageFreeze wird unter der [MIT-Lizenz](../LICENSE) veröffentlicht. Die
+permissive Lizenz hält die Bedingungen für Feuerwehren, Kommunen, Dienstleister
+und eigene Weiterentwicklungen bewusst einfach. Die Abwägung gegenüber
+Apache-2.0 und GPLv3 ist in der
+[Lizenzentscheidung](license-options.md) dokumentiert.

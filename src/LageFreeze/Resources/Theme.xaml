@@ -40,6 +40,7 @@
     <Style x:Key="AppWindowStyle" TargetType="Window">
         <Setter Property="Background" Value="{StaticResource WindowBackgroundBrush}" />
         <Setter Property="Foreground" Value="{StaticResource ForegroundBrush}" />
+        <Setter Property="Icon" Value="/LageFreeze;component/Assets/LageFreeze.ico" />
         <Setter Property="FontFamily" Value="Segoe UI Variable Text, Segoe UI" />
         <Setter Property="TextOptions.TextFormattingMode" Value="Display" />
         <Setter Property="TextOptions.TextRenderingMode" Value="ClearType" />

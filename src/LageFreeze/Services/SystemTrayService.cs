@@ -14,10 +14,14 @@ public sealed class SystemTrayService : IDisposable
     private readonly Forms.ToolStripMenuItem _freezeItem;
     private readonly Forms.ToolStripMenuItem _refreshItem;
     private readonly Forms.ToolStripMenuItem _liveItem;
+    private readonly Icon _applicationIcon;
     private bool _disposed;
 
     public SystemTrayService(Icon? applicationIcon = null)
     {
+        _applicationIcon = applicationIcon is null
+            ? LoadApplicationIcon()
+            : (Icon)applicationIcon.Clone();
         _menu = new Forms.ContextMenuStrip();
 
         var openItem = new Forms.ToolStripMenuItem("Öffnen");
@@ -51,7 +55,7 @@ public sealed class SystemTrayService : IDisposable
         _notifyIcon = new Forms.NotifyIcon
         {
             ContextMenuStrip = _menu,
-            Icon = applicationIcon ?? SystemIcons.Application,
+            Icon = _applicationIcon,
             Text = "LageFreeze – LIVE",
             Visible = false,
         };
@@ -109,6 +113,34 @@ public sealed class SystemTrayService : IDisposable
         _notifyIcon.Visible = false;
         _notifyIcon.Dispose();
         _menu.Dispose();
+        _applicationIcon.Dispose();
         _disposed = true;
+    }
+
+    private static Icon LoadApplicationIcon()
+    {
+        try
+        {
+            var resourceUri = new Uri(
+                "pack://application:,,,/LageFreeze;component/Assets/LageFreeze.ico",
+                UriKind.Absolute);
+            var resource = System.Windows.Application.GetResourceStream(resourceUri);
+            if (resource is not null)
+            {
+                using var stream = resource.Stream;
+                using var icon = new Icon(stream);
+                return (Icon)icon.Clone();
+            }
+        }
+        catch (IOException)
+        {
+            // The system icon below remains a safe fallback.
+        }
+        catch (ArgumentException)
+        {
+            // Invalid icon data must not prevent the application from starting.
+        }
+
+        return (Icon)SystemIcons.Application.Clone();
     }
 }

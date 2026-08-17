@@ -1,9 +1,13 @@
 # LageFreeze
 
+<p align="center">
+  <img src="src/LageFreeze/Assets/LageFreeze.png" alt="LageFreeze-Programmsymbol" width="144">
+</p>
+
 [![Build](https://github.com/thisislennard/LageFreeze/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/thisislennard/LageFreeze/actions/workflows/build.yml)
 [![Aktuelle Version](https://img.shields.io/github/v/release/thisislennard/LageFreeze?display_name=tag&sort=semver)](https://github.com/thisislennard/LageFreeze/releases/latest)
 ![Plattform](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4)
-![Lizenz](https://img.shields.io/badge/Lizenz-noch%20offen-lightgrey)
+![Lizenz](https://img.shields.io/github/license/thisislennard/LageFreeze)
 
 LageFreeze friert den sichtbaren Inhalt eines ausgewählten Windows-Monitors als
 pixelgenaues, randloses Standbild ein. Desktop und Anwendungen laufen darunter

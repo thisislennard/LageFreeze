@@ -7,6 +7,7 @@
     <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets\LageFreeze.ico</ApplicationIcon>
     <AssemblyName>LageFreeze</AssemblyName>
     <RootNamespace>LageFreeze</RootNamespace>
     <Version>0.1.0</Version>
@@ -25,4 +26,9 @@
     <DebugType>embedded</DebugType>
     <PublishReadyToRun>false</PublishReadyToRun>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\LageFreeze.ico" />
+    <Resource Include="Assets\LageFreeze.png" />
+  </ItemGroup>
 </Project>

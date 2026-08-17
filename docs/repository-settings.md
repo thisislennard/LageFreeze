@@ -39,5 +39,5 @@ situation-display
 - Optional die GitHub-Funktion für unveränderliche Releases aktivieren, sobald
   der Release-Ablauf einmal vollständig erprobt wurde.
 
-Eine Lizenzangabe und ein License-Topic werden erst nach der noch offenen
-Lizenzentscheidung ergänzt.
+GitHub soll die gewählte MIT-Lizenz aus der Datei [`LICENSE`](../LICENSE)
+erkennen. Ein zusätzliches License-Topic ist nicht erforderlich.

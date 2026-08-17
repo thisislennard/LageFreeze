@@ -162,6 +162,12 @@ internal sealed class ApplicationController : IDisposable
 
         _logger.Information("LageFreeze wird beendet.");
         _trayService.Hide();
+
+        // Release all hooks and registrations while the owning HWND is still
+        // valid. Waiting until Application.OnExit would attempt UnregisterHotKey
+        // after MainWindow.Close destroyed the handle (Win32 error 1400).
+        _hotkeyService.DetachWindow();
+        _monitorService.DetachWindow();
         _mainWindow?.Close();
         System.Windows.Application.Current.Shutdown();
     }
