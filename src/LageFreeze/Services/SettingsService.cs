@@ -188,6 +188,11 @@ public sealed class SettingsService : ISettingsService, IDisposable
             settings.DefaultDrawingMode = DrawingMode.Original;
         }
 
+        if (!Enum.IsDefined(settings.FrozenIndicatorPosition))
+        {
+            settings.FrozenIndicatorPosition = FrozenIndicatorPosition.TopRight;
+        }
+
         if (string.IsNullOrWhiteSpace(settings.ScreenshotFolder))
         {
             settings.ScreenshotFolder = null;

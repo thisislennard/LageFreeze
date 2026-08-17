@@ -18,6 +18,30 @@ die Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
 - Noch keine Fehlerbehebungen.
 
+## [0.1.0-beta.3] - 2026-08-17
+
+### Added
+
+- Konfigurierbarer, standardmäßig oben rechts sichtbarer
+  `EINGEFROREN`-Hinweis auf dem Zielmonitor; er lässt sich deaktivieren oder in
+  einer der vier Bildschirmecken positionieren.
+- Automatisierte Tests für Standardwerte, Persistenz, Validierung, alle vier
+  Hinweispositionen und das vollständige Ausblenden des Hinweises.
+
+### Changed
+
+- Hauptansicht, Monitorauswahl und Einstellungen kompakter, ruhiger und
+  übersichtlicher gestaltet.
+- ComboBoxen einschließlich Dropdown-Popup, Auswahlzuständen und Scrollbar
+  vollständig an das dunkle Oberflächendesign angepasst.
+- Programmsymbol zu einer klareren, auch in kleinen Windows-Größen gut
+  erkennbaren Form vereinfacht.
+
+### Fixed
+
+- Beim Aktualisieren wird der sichtbare `EINGEFROREN`-Hinweis zusammen mit dem
+  Overlay ausgeblendet und dadurch nicht in das neue Standbild aufgenommen.
+
 ## [0.1.0-beta.2] - 2026-08-17
 
 ### Added
@@ -65,6 +89,7 @@ die Versionierung folgt [Semantic Versioning](https://semver.org/lang/de/).
 
 - Noch keine Fehlerbehebungen.
 
-[Unreleased]: https://github.com/thisislennard/LageFreeze/compare/v0.1.0-beta.2...HEAD
+[Unreleased]: https://github.com/thisislennard/LageFreeze/compare/v0.1.0-beta.3...HEAD
+[0.1.0-beta.3]: https://github.com/thisislennard/LageFreeze/compare/v0.1.0-beta.2...v0.1.0-beta.3
 [0.1.0-beta.2]: https://github.com/thisislennard/LageFreeze/compare/v0.1.0-beta.1...v0.1.0-beta.2
 [0.1.0-beta.1]: https://github.com/thisislennard/LageFreeze/releases/tag/v0.1.0-beta.1

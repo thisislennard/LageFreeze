@@ -22,6 +22,11 @@ public sealed class AppSettings
 
     public DrawingMode DefaultDrawingMode { get; set; } = DrawingMode.Original;
 
+    public bool ShowFrozenIndicator { get; set; } = true;
+
+    public FrozenIndicatorPosition FrozenIndicatorPosition { get; set; }
+        = FrozenIndicatorPosition.TopRight;
+
     /// <summary>
     /// Optional user-selected PNG directory. A null or blank value resolves to
     /// the local Pictures/LageFreeze directory.
@@ -48,6 +53,14 @@ public enum DrawingMode
     Original,
     Dimmed,
     StronglyDimmed,
+}
+
+public enum FrozenIndicatorPosition
+{
+    TopLeft,
+    TopRight,
+    BottomLeft,
+    BottomRight,
 }
 
 /// <summary>

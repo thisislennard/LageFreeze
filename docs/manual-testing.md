@@ -1,8 +1,10 @@
 # Manuelle Testmatrix
 
-Automatisierte Tests decken reine Programmlogik ab. Bildschirmaufnahme,
-Vollbildfenster, DPI, Hotkeys und Änderungen der Monitorhardware müssen vor
-jedem Release zusätzlich auf echten Windows-Systemen geprüft werden.
+Automatisierte Tests decken reine Programmlogik, Einstellungspersistenz und die
+strukturelle Initialisierung zentraler WPF-Fenster ab. Bildschirmaufnahme,
+visuelle Darstellung, Vollbildfenster, DPI, Hotkeys und Änderungen der
+Monitorhardware müssen vor jedem Release zusätzlich auf echten Windows-Systemen
+geprüft werden.
 
 Ein nicht ausgeführter Hardwaretest gilt nicht als bestanden. Ergebnisse werden
 für jeden Release-Kandidaten in einer Kopie dieser Matrix oder im zugehörigen
@@ -40,19 +42,26 @@ abgedeckt hat.
 | ID | Prüfung | Erwartetes Ergebnis | Ergebnis / Notiz |
 | --- | --- | --- | --- |
 | START-01 | Anwendung erstmals starten | Hauptfenster öffnet ohne technischen Fehlerdialog; Monitore werden gelistet. | |
+| UI-01 | Hauptansicht, Monitorauswahl und Einstellungen bei 100 %, 125 % und 150 % Skalierung öffnen | Inhalte wirken kompakt und ruhig, bleiben vollständig lesbar und bedienbar und werden weder abgeschnitten noch überlagert. | |
+| DROP-01 | Jede ComboBox in Hauptansicht, Monitorauswahl und Einstellungen öffnen und Einträge mit Maus sowie Tastatur wechseln | Geschlossenes Feld, Popup, Einträge, Auswahl-, Hover- und Fokuszustände sowie eine gegebenenfalls sichtbare Scrollbar bleiben vollständig dunkel und gut lesbar; es erscheint keine helle Systemfläche. | |
 | MON-01 | Jeden Monitor anhand Nummer, Name und Auflösung mit Windows vergleichen | Liste ist vollständig und eindeutig genug für die Auswahl. | |
 | MON-02 | Zielmonitor wählen, Anwendung schließen und erneut starten | Derselbe physische Monitor wird robust wiedererkannt. | |
 | MON-03 | Gespeicherten Zielmonitor vor dem Start entfernen | Anwendung bleibt bedienbar und fordert verständlich zu einer neuen Auswahl auf. | |
 | ID-01 | **Monitore identifizieren** auslösen | Auf jedem Monitor erscheint kurz die korrekte, große Nummer; alle Fenster verschwinden anschließend. | |
-| FRZ-01 | Bewegten Inhalt auf dem Zielmonitor einfrieren | Das Standbild liegt exakt auf dem Zielmonitor; kein Rand, keine Taskleiste, kein Cursor und keine Bedienelemente sind sichtbar. | |
+| FRZ-01 | Bewegten Inhalt auf dem Zielmonitor einfrieren | Das Standbild liegt exakt auf dem Zielmonitor; kein Rand, keine Taskleiste, kein Cursor und außer dem konfigurierten Statushinweis keine Bedienelemente sind sichtbar. | |
 | FRZ-02 | Während Freeze auf **LIVE-BILD WIEDERHERSTELLEN** drücken | Overlay schließt sofort und der unveränderte Live-Inhalt ist sichtbar. | |
+| IND-01 | Mit Standardeinstellungen einfrieren | Genau ein gut lesbarer, nicht interaktiver `EINGEFROREN`-Hinweis erscheint oben rechts und verdeckt nur seinen kleinen Randbereich. | |
+| IND-02 | Den Hinweis nacheinander oben links, oben rechts, unten links und unten rechts positionieren | Der Hinweis sitzt nach dem Speichern sofort in der gewählten Ecke, bleibt vollständig auf dem Zielmonitor und die Position bleibt nach einem Neustart erhalten. | |
+| IND-03 | Den `EINGEFROREN`-Hinweis deaktivieren und erneut einfrieren | Auf dem Zielmonitor erscheint kein Hinweis; die deaktivierte Einstellung bleibt nach einem Neustart erhalten. | |
 | REF-01 | Inhalt hinter dem Overlay verändern und **STANDBILD AKTUALISIEREN** drücken | Das neue Hintergrundbild wird gezeigt, nicht das vorherige Standbild; Flackern bleibt minimal. | |
+| REF-02 | Bei sichtbarem `EINGEFROREN`-Hinweis aktualisieren und den Hinweis danach in den Einstellungen ausblenden | Der Hintergrund wird neu aufgenommen, es erscheint nie ein doppelter Hinweis und nach dem Ausblenden bleibt kein in das Standbild eingebrannter Hinweis zurück. | |
 | HOT-01 | `F9` bei inaktivem Hauptfenster verwenden | Freeze und Live wechseln zuverlässig. | |
 | HOT-02 | `F10` bei aktivem Freeze und inaktivem Hauptfenster verwenden | Standbild wird aktualisiert. | |
 | HOT-03 | Hotkey durch eine andere Anwendung belegen und LageFreeze starten | Konflikt wird verständlich gemeldet; Bedienung über das Hauptfenster bleibt möglich. | |
 | DRAW-01 | Während Freeze zwischen Original, leicht und stark abgedunkelt wechseln | Nur die Darstellung des Standbilds wird in klar unterscheidbaren Stufen abgedunkelt; Position und Schärfe bleiben unverändert. | |
 | PNG-01 | Aktives Standbild im Standardordner speichern | Gültige PNG-Datei entsteht unter `Bilder\LageFreeze`; Dateiname enthält Datum und Uhrzeit und überschreibt keine vorhandene Datei. | |
 | PNG-02 | Benutzerdefinierten Screenshot-Ordner wählen und erneut speichern | PNG wird ausschließlich im gewählten lokalen Ordner gespeichert. | |
+| PNG-03 | Bei sichtbarem `EINGEFROREN`-Hinweis ein Standbild speichern | Die PNG-Datei enthält nur den aufgenommenen Monitorinhalt, nicht den Hinweis. | |
 | SET-01 | Hotkeys ändern, deaktivieren und auf Standard zurücksetzen | Änderungen werden nach Speichern aktiv, bleiben nach Neustart erhalten und lassen sich auf `F9`/`F10` zurücksetzen. | |
 | TRAY-01 | Hauptfenster bei aktiviertem Tray schließen oder minimieren | Hauptfenster verschwindet entsprechend der Einstellung; Tray-Menü bleibt erreichbar und zeigt nur zum Zustand passende Aktionen aktiv. | |
 | TRAY-02 | Freeze, Refresh, Live, Einstellungen und Beenden über das Tray auslösen | Jede Aktion entspricht der Hauptansicht; **Beenden** entfernt Icon und alle Overlays. | |

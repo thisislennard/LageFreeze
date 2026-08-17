@@ -31,5 +31,36 @@
             Background="Black"
             IsHitTestVisible="False"
             Opacity="0" />
+
+        <Border
+            x:Name="FrozenIndicator"
+            Margin="24"
+            Padding="15,9,17,9"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Panel.ZIndex="10"
+            AutomationProperties.Name="Standbild-Hinweis: Eingefroren"
+            Background="#D90A1019"
+            BorderBrush="#80FF4D5A"
+            BorderThickness="1"
+            CornerRadius="999"
+            IsHitTestVisible="False"
+            Visibility="Collapsed">
+            <StackPanel Orientation="Horizontal">
+                <Ellipse
+                    Width="11"
+                    Height="11"
+                    Margin="0,0,10,0"
+                    VerticalAlignment="Center"
+                    Fill="#FFFF4D5A" />
+                <TextBlock
+                    VerticalAlignment="Center"
+                    FontFamily="Segoe UI Variable Text, Segoe UI"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="White"
+                    Text="EINGEFROREN" />
+            </StackPanel>
+        </Border>
     </Grid>
 </views:PhysicalPixelWindow>

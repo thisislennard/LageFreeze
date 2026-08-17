@@ -10,13 +10,14 @@ aus der PNG-Quelle erzeugt:
 ```
 
 Die PNG-Quelle wurde am 17. August 2026 mit dem integrierten OpenAI-Bildwerkzeug
-und folgendem Produktionsbriefing erzeugt:
+erstellt und anschließend mit folgendem Produktionsbriefing vereinfacht:
 
-> Originales Windows-Programmsymbol für LageFreeze; vereinfachter Monitor mit
-> klarer Schneeflocke und dezentem Pause-Symbol; minimale, vektorfreundliche
-> Formen; starke Silhouette; dunkelblau, Eis-Cyan und Kühl-Blau; transparenter
-> Außenbereich; ohne Text, Wasserzeichen, Mockup oder fremde Markenzeichen; von
-> 16 bis 256 Pixel gut erkennbar.
+> Das vorhandene LageFreeze-Symbol drastisch zu einem ruhigen, modernen und
+> flachen App-Icon vereinfachen; Monitor, Schneeflocke und Pause-Zustand als
+> wiedererkennbare Grundidee erhalten; klare geometrische Formen, starke
+> Silhouette, Dunkelblau und Eis-Cyan, transparenter Außenbereich; ohne Text,
+> Wasserzeichen, Mockup, 3D-Details oder fremde Markenzeichen; von 16 bis 256
+> Pixel gut erkennbar.
 
 Das Symbol ist Bestandteil des LageFreeze-Projekts und wird zusammen mit dem
 Projekt unter der MIT-Lizenz veröffentlicht.

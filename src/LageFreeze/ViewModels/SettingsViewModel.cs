@@ -23,6 +23,8 @@ internal sealed class SettingsViewModel : ObservableObject
     private string _toggleHotkeyText;
     private string _refreshHotkeyText;
     private DrawingMode _defaultDrawingMode;
+    private bool _showFrozenIndicator;
+    private FrozenIndicatorPosition _frozenIndicatorPosition;
     private string _screenshotFolder;
     private string _validationMessage = string.Empty;
 
@@ -45,6 +47,8 @@ internal sealed class SettingsViewModel : ObservableObject
         _toggleHotkeyText = HotkeyTextConverter.Format(settings.ToggleFreezeHotkey);
         _refreshHotkeyText = HotkeyTextConverter.Format(settings.RefreshHotkey);
         _defaultDrawingMode = settings.DefaultDrawingMode;
+        _showFrozenIndicator = settings.ShowFrozenIndicator;
+        _frozenIndicatorPosition = settings.FrozenIndicatorPosition;
         _screenshotFolder = settings.ScreenshotFolder ?? settings.ResolveScreenshotFolder();
 
         SaveCommand = new RelayCommand(Save);
@@ -66,6 +70,14 @@ internal sealed class SettingsViewModel : ObservableObject
     public RelayCommand BrowseScreenshotFolderCommand { get; }
 
     public IReadOnlyList<MonitorInfo> Monitors { get; }
+
+    public IReadOnlyList<FrozenIndicatorPositionOption> FrozenIndicatorPositions { get; } =
+    [
+        new(LageFreeze.Models.FrozenIndicatorPosition.TopLeft, "Oben links"),
+        new(LageFreeze.Models.FrozenIndicatorPosition.TopRight, "Oben rechts"),
+        new(LageFreeze.Models.FrozenIndicatorPosition.BottomLeft, "Unten links"),
+        new(LageFreeze.Models.FrozenIndicatorPosition.BottomRight, "Unten rechts"),
+    ];
 
     public MonitorInfo? SelectedDefaultMonitor
     {
@@ -127,6 +139,18 @@ internal sealed class SettingsViewModel : ObservableObject
         set => SetProperty(ref _defaultDrawingMode, value);
     }
 
+    public bool ShowFrozenIndicator
+    {
+        get => _showFrozenIndicator;
+        set => SetProperty(ref _showFrozenIndicator, value);
+    }
+
+    public FrozenIndicatorPosition FrozenIndicatorPosition
+    {
+        get => _frozenIndicatorPosition;
+        set => SetProperty(ref _frozenIndicatorPosition, value);
+    }
+
     public string ScreenshotFolder
     {
         get => _screenshotFolder;
@@ -142,6 +166,12 @@ internal sealed class SettingsViewModel : ObservableObject
     private void Save()
     {
         ValidationMessage = string.Empty;
+        if (!Enum.IsDefined(FrozenIndicatorPosition))
+        {
+            ValidationMessage = "Bitte eine gültige Position für den Standbild-Hinweis auswählen.";
+            return;
+        }
+
         if (!HotkeyTextConverter.TryParse(
                 ToggleHotkeyText,
                 EnableToggleHotkey,
@@ -183,6 +213,8 @@ internal sealed class SettingsViewModel : ObservableObject
             ToggleFreezeHotkey = toggle,
             RefreshHotkey = refresh,
             DefaultDrawingMode = DefaultDrawingMode,
+            ShowFrozenIndicator = ShowFrozenIndicator,
+            FrozenIndicatorPosition = FrozenIndicatorPosition,
             ScreenshotFolder = string.IsNullOrWhiteSpace(ScreenshotFolder)
                 ? null
                 : ScreenshotFolder.Trim(),
@@ -210,3 +242,7 @@ internal sealed class SettingsViewModel : ObservableObject
         }
     }
 }
+
+internal sealed record FrozenIndicatorPositionOption(
+    FrozenIndicatorPosition Value,
+    string DisplayName);

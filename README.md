@@ -51,23 +51,27 @@ Live oder beim Beenden wieder geschlossen wird.
 2. Lagebild in der gewünschten Anwendung öffnen.
 3. **BILD EINFRIEREN** drücken.
 4. Auf der Plexiglasscheibe markieren.
-5. Bei Bedarf **STANDBILD AKTUALISIEREN** verwenden.
+5. Bei Bedarf **STANDBILD AKTUALISIEREN** verwenden; der optionale
+   `EINGEFROREN`-Hinweis wird dabei nicht in das neue Standbild aufgenommen.
 6. Mit **LIVE-BILD WIEDERHERSTELLEN** zum aktuellen Bild zurückkehren.
 
 ## Funktionen der 0.1.0-Vorabversion
 
 - Auswahl und lokales Wiedererkennen eines angeschlossenen Monitors
 - Monitoridentifikation auf allen Displays
-- pixelgenaues Standbild ohne Taskleiste, Mauszeiger oder Bedienelemente
+- pixelgenaues Standbild ohne Taskleiste, Mauszeiger oder interaktive
+  Bedienelemente; auf Wunsch erscheint nur der kleine Statushinweis
 - Live/Freeze-Wechsel und Aktualisierung des tatsächlichen Hintergrundinhalts
 - konfigurierbare und deaktivierbare globale Hotkeys mit `F9` und `F10` als Standard
 - Unterstützung für unterschiedliche Auflösungen, Anordnungen und DPI-Skalierungen
 - verständliche Fehlermeldungen und lokale, täglich getrennte Logs
-- ruhige, dunkle und touchscreen-taugliche Oberfläche
+- kompakte, ruhige und touchscreen-taugliche Oberfläche mit vollständig dunklen
+  Auswahlfeldern und Dropdown-Popups
 - System-Tray mit den wichtigsten Freeze-, Live- und Refresh-Aktionen
 - optionaler Autostart und minimierter Start, standardmäßig deaktiviert
 - lokaler PNG-Export nach `Bilder\LageFreeze` oder in einen gewählten Ordner
 - Zeichenmodus in Original, leicht abgedunkelt oder stark abgedunkelt
+- optionaler `EINGEFROREN`-Hinweis in einer der vier Bildschirmecken
 - übersichtliche Einstellungen für Monitor, Hotkeys, Tray, Anzeige und Screenshots
 - vollständig lokaler Betrieb ohne Cloud, Telemetrie oder Tracking
 
@@ -108,12 +112,14 @@ Für die portable Variante das ZIP-Archiv in einen eigenen Ordner entpacken und
 ## Verwendung
 
 Das Hauptfenster bleibt auf dem Bedienmonitor. Der ausgewählte Außenmonitor zeigt
-im Freeze-Modus ausschließlich das Standbild. Der Status **LIVE** beziehungsweise
+im Freeze-Modus das Standbild und, falls aktiviert, nur den kleinen
+`EINGEFROREN`-Hinweis darüber. Der Status **LIVE** beziehungsweise
 **EINGEFROREN** und die jeweils verfügbaren großen Aktionen sind im Hauptfenster
 jederzeit sichtbar.
 
-- **STANDBILD AKTUALISIEREN** blendet das Overlay kurz aus und nimmt den
-  tatsächlichen Inhalt dahinter neu auf.
+- **STANDBILD AKTUALISIEREN** blendet das gesamte Overlay einschließlich des
+  `EINGEFROREN`-Hinweises kurz aus und nimmt den tatsächlichen Inhalt dahinter
+  neu auf. Der Hinweis wird dadurch nicht dauerhaft in das Standbild eingebrannt.
 - Der **Zeichenmodus** dunkelt nur die Anzeige ab, damit Markierungen auf einer
   Plexiglasscheibe besser sichtbar sein können.
 - **STANDBILD SPEICHERN** exportiert das aktuell erfasste Bild lokal als PNG.
@@ -134,6 +140,21 @@ tatsächlich verwendeten Hardware geprüft werden.
 Kann ein Tastenkürzel nicht registriert werden, ist es wahrscheinlich bereits
 von einer anderen Anwendung belegt. LageFreeze zeigt dann einen Hinweis und
 bleibt über die Oberfläche bedienbar.
+
+## Einstellungen
+
+Unter **EINSTELLUNGEN** lassen sich Standardmonitor, Autostart, minimierter
+Start, System-Tray, Tastenkürzel, Zeichenmodus und Screenshot-Ordner festlegen.
+Alle Auswahlfelder verwenden auch im geöffneten Dropdown ein durchgehend dunkles
+Design.
+
+Der `EINGEFROREN`-Hinweis ist standardmäßig aktiviert und erscheint oben rechts
+auf dem eingefrorenen Zielmonitor. Er kann vollständig ausgeschaltet oder oben
+links, oben rechts, unten links beziehungsweise unten rechts positioniert
+werden. Änderungen gelten nach **SPEICHERN** sofort auch für ein bereits
+sichtbares Standbild und bleiben nach einem Neustart erhalten. Der Hinweis ist
+nur eine Anzeigeebene: Er gehört weder zum gespeicherten PNG noch zum beim
+Aktualisieren neu aufgenommenen Bild.
 
 ## Systemanforderungen
 

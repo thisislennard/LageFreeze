@@ -2,17 +2,19 @@
 
 ## Stand der 0.1.0-Vorabversion
 
-Die Funktionen aus Phase 1 und Phase 2 sind im aktuellen Entwicklungsstand
-implementiert. Build, automatisierte Tests, Installer und Release-Automatisierung
-sind vorbereitet. Vor dem ersten öffentlichen Tag fehlen noch die vollständige
-manuelle Hardwarematrix, geprüfte Screenshots und die Abnahme von Installation,
-Update und Deinstallation auf einem sauberen Windows-System.
+Die Funktionen aus Phase 1 und Phase 2 einschließlich der kompakten Oberfläche,
+dunklen Dropdown-Popups und des konfigurierbaren `EINGEFROREN`-Hinweises sind im
+aktuellen Entwicklungsstand implementiert. Build, automatisierte Tests,
+Installer und Release-Automatisierung sind vorbereitet. Vor einer stabilen
+Freigabe fehlen noch die vollständige manuelle Hardwarematrix, geprüfte
+Screenshots und die Abnahme von Installation, Update und Deinstallation auf
+einem sauberen Windows-System.
 
 ## Phase 1 – stabiles MVP
 
 - Solution, WPF-Anwendung und fokussiertes Testprojekt
 - Monitorerkennung, Auswahl, Identifikation und gespeicherte Auswahl
-- Freeze, Live und technisch validierter Refresh
+- Freeze, Live und Refresh mit verpflichtender Prüfung auf realer Hardware
 - korrekte DPI- und Multi-Monitor-Behandlung
 - globale Hotkeys
 - verständliche Fehler und lokales Logging
@@ -25,6 +27,9 @@ Update und Deinstallation auf einem sauberen Windows-System.
 - Screenshot-Export
 - Zeichenmodus und Bildanpassung
 - optionaler Autostart
+- kompaktere Hauptansicht, Monitorauswahl und Einstellungen
+- vollständig dunkle ComboBoxen einschließlich Dropdown-Popup
+- optionaler `EINGEFROREN`-Hinweis mit vier Eckpositionen
 
 ## Phase 3 – Distribution (technisch vorbereitet)
 

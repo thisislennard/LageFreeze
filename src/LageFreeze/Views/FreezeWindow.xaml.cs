@@ -75,6 +75,29 @@ public partial class FreezeWindow : PhysicalPixelWindow
         };
     }
 
+    /// <summary>
+    /// Shows or hides the non-interactive freeze marker and anchors it to the
+    /// requested monitor corner. The marker is part of the overlay, so hiding
+    /// the overlay for a refresh also excludes it from the new capture.
+    /// </summary>
+    public void SetFrozenIndicator(bool isVisible, FrozenIndicatorPosition position)
+    {
+        if (!Enum.IsDefined(position))
+        {
+            throw new ArgumentOutOfRangeException(nameof(position));
+        }
+
+        FrozenIndicator.HorizontalAlignment = position is FrozenIndicatorPosition.TopLeft
+            or FrozenIndicatorPosition.BottomLeft
+            ? System.Windows.HorizontalAlignment.Left
+            : System.Windows.HorizontalAlignment.Right;
+        FrozenIndicator.VerticalAlignment = position is FrozenIndicatorPosition.TopLeft
+            or FrozenIndicatorPosition.TopRight
+            ? System.Windows.VerticalAlignment.Top
+            : System.Windows.VerticalAlignment.Bottom;
+        FrozenIndicator.Visibility = isVisible ? Visibility.Visible : Visibility.Collapsed;
+    }
+
     protected override void OnClosed(EventArgs e)
     {
         FrozenImage.Source = null;

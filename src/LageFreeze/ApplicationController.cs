@@ -218,6 +218,9 @@ internal sealed class ApplicationController : IDisposable
                 target.Bounds.Height,
                 image);
             newOverlay.SetDrawingMode(_mainViewModel?.DrawingMode ?? DrawingMode.Original);
+            newOverlay.SetFrozenIndicator(
+                _settings.ShowFrozenIndicator,
+                _settings.FrozenIndicatorPosition);
             newOverlay.Closed += FreezeWindowClosed;
             newOverlay.Show();
             newOverlay.ReapplyPhysicalBounds();
@@ -495,6 +498,8 @@ internal sealed class ApplicationController : IDisposable
             _mainViewModel.DrawingMode = _settings.DefaultDrawingMode;
         }
 
+        ApplyFrozenIndicatorSettings();
+
         ApplyHotkeys(showErrors: true);
         ApplyTrayVisibility();
     }
@@ -520,6 +525,13 @@ internal sealed class ApplicationController : IDisposable
     private void ApplyDrawingMode(DrawingMode mode)
     {
         _freezeWindow?.SetDrawingMode(mode);
+    }
+
+    private void ApplyFrozenIndicatorSettings()
+    {
+        _freezeWindow?.SetFrozenIndicator(
+            _settings.ShowFrozenIndicator,
+            _settings.FrozenIndicatorPosition);
     }
 
     private IReadOnlyList<string> ApplyHotkeys(bool showErrors)

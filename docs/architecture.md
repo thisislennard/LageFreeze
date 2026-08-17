@@ -70,6 +70,22 @@ Ablauf vermeidet zusätzliche Capture-Frameworks. Sichtbares Flackern und
 unterschiedliches Verhalten von GPU-beschleunigten oder geschützten Inhalten
 bleiben hardwareabhängig und sind Teil der manuellen Testmatrix.
 
+## Oberfläche und Standbild-Hinweis
+
+Gemeinsame WPF-Styles halten Hauptansicht, Monitorauswahl und Einstellungen
+kompakt und konsistent. ComboBoxen verwenden ein eigenes ControlTemplate, damit
+auch das technisch separate Dropdown-Popup, seine Einträge und die Scrollbar
+vollständig im dunklen Design bleiben. Dafür wird keine zusätzliche
+UI-Abhängigkeit eingesetzt.
+
+Der optionale `EINGEFROREN`-Hinweis liegt als nicht interaktive Ebene oberhalb
+von Standbild und Abdunklung. Sichtbarkeit und eine von vier Eckpositionen werden
+in den lokalen Einstellungen gespeichert; Standard ist sichtbar oben rechts.
+Das aufgenommene `BitmapSource` bleibt davon unverändert und ist weiterhin die
+Quelle für PNG-Exporte. Da der Refresh das gesamte Overlay vor der Aufnahme
+ausblendet, kann auch ein sichtbarer Hinweis nicht erneut in das Bild aufgenommen
+werden.
+
 ## Lokale Persistenz und Diagnose
 
 Einstellungen liegen als lesbares UTF-8-JSON unter

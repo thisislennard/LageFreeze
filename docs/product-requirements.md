@@ -22,7 +22,8 @@ Quellanwendung.
 3. Zur Identifikation einige Sekunden lang eine große Nummer auf jedem Monitor
    anzeigen.
 4. Nur den gewählten Monitor aufnehmen und ohne Rand, Taskleiste, Mauszeiger oder
-   Bedienelemente pixelgenau über ihm anzeigen.
+   interaktive Bedienelemente pixelgenau über ihm anzeigen; ausgenommen ist der
+   ausdrücklich konfigurierte, rein visuelle Standbild-Hinweis.
 5. Freeze beenden und das unveränderte Live-Bild unmittelbar sichtbar machen.
 6. Ein aktives Standbild aus dem tatsächlichen Inhalt hinter dem Overlay erneuern,
    möglichst ohne sichtbares Flackern.
@@ -42,7 +43,17 @@ Die dunkle, ruhige und touchfreundliche Hauptansicht zeigt jederzeit:
 - Aktionen zum Monitorwechsel und Identifizieren.
 
 Große Schaltflächen, klare Abstände und wenig Text haben Vorrang vor Animationen
-oder komplexer Navigation.
+oder komplexer Navigation. Die Oberfläche bleibt dabei kompakt genug für übliche
+Desktopauflösungen. ComboBoxen, ihre Dropdown-Popups, Auswahlzustände und
+Scrollbars verwenden durchgehend das dunkle Farbschema; helle Systemstandard-
+Flächen dürfen nicht sichtbar werden.
+
+Auf dem eingefrorenen Zielmonitor kann ein nicht interaktiver
+`EINGEFROREN`-Hinweis angezeigt werden. Er ist standardmäßig aktiviert und oben
+rechts positioniert, kann aber deaktiviert oder in jede der vier Ecken verschoben
+werden. Position und Sichtbarkeit werden lokal gespeichert. Der Hinweis ist nur
+Teil des Overlays und darf weder in eine Aktualisierung noch in einen PNG-Export
+eingebrannt werden.
 
 ## Display-Anforderungen
 
@@ -69,30 +80,36 @@ ein dauerhaft eingefrorenes oder schwarzes Bild hinterlassen.
   nicht in Benutzerdialoge.
 - Optional gespeicherte Screenshots bleiben lokal.
 
-## Spätere Funktionen
+## In 0.1.0 integrierter Bedienkomfort
 
 - System-Tray und konfigurierbares Verhalten beim Schließen
 - Autostart, standardmäßig deaktiviert
 - konfigurierbare/deaktivierbare Hotkeys
 - PNG-Export nach `Bilder\LageFreeze`
 - Zeichenmodus: Original, leicht oder stark abgedunkelt
+- konfigurierbarer `EINGEFROREN`-Hinweis
+
+## Spätere Funktionen
+
 - weitere Helligkeits-, Kontrast- und Sättigungsoptionen
 - optionale Update-Prüfung, aber kein automatisches Update im MVP
 
 ## Distribution
 
-Langfristiges Ziel ist `LageFreeze-Setup-x64.exe`, optional ergänzt durch
+Die vorbereitete Distribution umfasst `LageFreeze-Setup-x64.exe`,
 `LageFreeze-Portable-x64.zip` und `SHA256SUMS.txt`. Installation, Startmenü,
 optionale Desktop-Verknüpfung, Update und Deinstallation sollen Windows-typisch
 funktionieren. Für Endanwender wird eine self-contained x64-Veröffentlichung
-bevorzugt.
+verwendet.
 
 ## Qualität und Abnahme
 
-Automatisierte Tests konzentrieren sich auf Einstellungen, Monitor-Matching,
-Hotkey-Konfiguration, Dateinamen und Speicherpfade. Manuell zu prüfen sind echte
-Multi-Monitor-Konfigurationen, gemischte DPI-Werte, Fullscreen, Freeze/Refresh,
-Monitorentfernung, 4K und Hochformat.
+Automatisierte Tests konzentrieren sich auf Einstellungen einschließlich des
+Standbild-Hinweises, Monitor-Matching, Hotkey-Konfiguration, Dateinamen,
+Speicherpfade und die Initialisierung zentraler Fenster. Manuell zu prüfen sind
+echte Multi-Monitor-Konfigurationen, gemischte DPI-Werte, Fullscreen,
+Freeze/Refresh ohne erneut aufgenommenen Hinweis, die vollständig dunklen
+Dropdown-Popups, Monitorentfernung, 4K und Hochformat.
 
 Ein Release setzt einen erfolgreichen Build, App-Start, Monitorerkennung,
 Freeze/Live/Refresh, sauberes Beenden, funktionierende Installation und
