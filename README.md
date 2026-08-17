@@ -4,7 +4,7 @@
 
   <h1>LageFreeze</h1>
 
-  <p><strong>Ein Monitor. Ein stabiles Lagebild. Jederzeit zurück zu Live.</strong></p>
+  <p><strong>Ein Monitor. Ein stabiles Lagebild. Jederzeit zurück zum Live-Bild.</strong></p>
 
   <p>
     LageFreeze friert den sichtbaren Inhalt eines ausgewählten Windows-Monitors<br>
@@ -52,7 +52,8 @@ flowchart LR
     B --> C[Bild einfrieren]
     C --> D[Auf Plexiglas markieren]
     D --> E{Was wird benötigt?}
-    E -->|Neuer Stand| C
+    E -->|Neuer Stand| G[Standbild aktualisieren]
+    G --> D
     E -->|Zurück zu Live| F[Live-Bild wiederherstellen]
 ```
 
